@@ -13,6 +13,8 @@ This repository contains a structured budget and ledger system. Version 13.1 is 
 Version 13 remains architecture-locked; v13.1 is a minor structural refinement. Any major architectural changes will be introduced in v14. The roadmap for v14 is available under [roadmap/v14.md](/roadmap/v14.md). 
 
 ## Tooling  
+Trello JSON → Ledger CSV, Converter Tool Readme
+[/tools/trello-json-to-v13/README.md](/tools/trello-json-to-v13/README.md)
 
 The repository contains optional tooling that assists with data ingestion and validation. Tooling is:  
 - Not required for operating V13 manually  
