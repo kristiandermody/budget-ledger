@@ -1,3 +1,20 @@
+## [13.1] - 2026-02-13
+
+### Added
+- Transaction Type column (Deposit / Expense)
+- Transaction Classification column
+- Trello Link column
+- Hidden Signed Amount system column
+
+### Removed
+- Authorized Date column
+
+### Structural
+- Formalized Ledger dimensional modeling
+- Added validation constraints
+- Splits inherit parent direction
+
+No architectural philosophy changes.
 # Changelog
 
 All notable changes to this project will be documented here.
