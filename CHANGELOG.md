@@ -42,3 +42,13 @@ No architectural philosophy changes.
 
 ### Stability
 - Architecture locked, governance enforced, production ready.
+
+## [12.3.1] — February 2026
+- Added dedicated Monthly Ledger page and clarified separation between budget template and ledger.
+- Defined JSON → CSV manual paste workflow.
+
+## [12.3] — February 2026
+- Added Deposits and Refunds tabs with standardized headers and baseline fields.
+- Styled tabs to match workbook.
+
+## [12.2] — Reverted
