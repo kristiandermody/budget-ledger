@@ -2,6 +2,40 @@
 
 All notable changes to this project will be documented here.
 
+## v13.1.1 — Governance & Tooling Stabilization - 2026-02-15
+
+### Governance
+- Introduced formal versioning policy under `/governance/versioning_policy.md`
+- Standardized commit classification (Feature, Docs, Refactor, etc.)
+- Formalized branch lifecycle discipline and merge expectations
+- Established semantic version alignment rules
+
+### Repository Structure
+- Introduced `/docs/` directory and reorganized documentation hierarchy
+- Moved architecture documentation to `/docs/architecture`
+- Moved operating guides to `/docs/operating`
+- Cleaned and standardized folder structure
+- Preserved file history during renames
+
+### Tooling
+- Renamed `trello-json-to-v13` to `trello-json-to-ledger-csv`
+- Updated all references to reflect new tool naming
+- Introduced `/tools/GPT-agent` automation scaffold
+- Clarified separation between:
+  - CLI-based Python converter
+  - GPT-driven automation layer
+- Updated root README to reflect tooling boundaries and system requirements
+
+### Documentation
+- Refined Tooling section for clarity
+- Added System Requirements section
+- Removed minor formatting artifacts
+
+---
+
+No architectural, ledger schema, or workbook changes were introduced in this release.
+This patch release stabilizes governance, tooling structure, and repository organization.
+
 ## [13.1] - 2026-02-13
 
 ### Added
