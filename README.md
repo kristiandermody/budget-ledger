@@ -17,19 +17,50 @@ Detailed version increment rules, commit classification standards, branch lifecy
 
 ## Tooling
 
-[Trello JSON → Ledger CSV Converter Tool](/tools/trello-json-to-ledger-csv/README.md)
-
-The repository contains optional tooling that assists with data ingestion and validation.
+The repository contains optional tooling that assists with data ingestion, validation, and automation workflows.
 
 Tooling is:
 
 - Not required for operating V13 manually
 - Versioned independently from core architecture
 - Structured under `/tools/`
+- Part of the evolving V14 automation layer
 
-Current tool:
+---
 
-- Trello JSON → Ledger CSV converter
+### Trello JSON → Ledger CSV Converter (CLI / Python)
+
+[/tools/trello-json-to-ledger-csv/README.md](/tools/trello-json-to-ledger-csv/README.md)
+
+This tool is a command-line Python-based converter that:
+
+- Transforms Trello JSON exports into V13-compatible Ledger CSV format
+- Enforces validation rules
+- Produces structured error and validation reporting
+- Preserves ledger invariants without modifying system meaning
+
+This tool supports automated transaction ingestion while maintaining strict architectural boundaries.
+
+---
+
+### Trello JSON → Ledger CSV Converter GPT Agent
+
+[/tools/GPT-agent/README.md](/tools/GPT-agent/README.md)
+
+This tool defines a GPT-driven automation layer for structured ledger conversion workflows.
+
+It provides:
+
+- Ledger output schema definitions
+- Parent/child taxonomy structures
+- Structural label registry
+- JSON interpretation specifications
+- Validation reporting specifications
+- Governance workflow definitions
+
+The GPT Agent represents an advanced automation interface layered on top of the core system. It does not alter V13 architecture, ledger meaning, or governance rules.
+
+---
 
 Tooling represents the early foundation of V14 automation but does not modify V13 architecture or system meaning.
 
