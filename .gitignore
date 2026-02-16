@@ -1,1 +1,5 @@
+# macOs Files
 .DS_Store
+
+# Local AI snapshot archives
+snapshots/
