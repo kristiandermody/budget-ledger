@@ -15,16 +15,38 @@ Version 13 remains architecture-locked; v13.1 is a minor structural refinement. 
 ## Governance & Change Policy
 Detailed version increment rules, commit classification standards, branch lifecycle practices, and release discipline are defined in `/governance/versioning_policy.md`.
 
-## Tooling  
-Trello JSON → Ledger CSV, Converter Tool Readme
-[/tools/trello-json-to-v13/README.md](/tools/trello-json-to-v13/README.md)
+## Tooling
 
-The repository contains optional tooling that assists with data ingestion and validation. Tooling is:  
-- Not required for operating V13 manually  
-- Versioned independently  
-- Structured under `/tools/`  
+[Trello JSON → Ledger CSV Converter Tool](/tools/trello-json-to-ledger-csv/README.md)
 
-Current tools:  
-- Trello JSON → V13 Ledger CSV converter  
+The repository contains optional tooling that assists with data ingestion and validation.
 
-Tooling represents the beginning of V14 automation but does not modify V13 architecture. 
+Tooling is:
+
+- Not required for operating V13 manually
+- Versioned independently from core architecture
+- Structured under `/tools/`
+
+Current tool:
+
+- Trello JSON → Ledger CSV converter
+
+Tooling represents the early foundation of V14 automation but does not modify V13 architecture or system meaning.
+
+## System Requirements
+
+The Budget & Ledger system may be operated manually or with optional tooling that supports convertings Trello JSON Exports to ledger friendly CSV format.
+
+Core requirements:
+
+- Microsoft Excel
+- Structured budget workbook (see `/releases/`)
+
+Optional tooling requirements (for automated data ingestion):
+
+- Trello
+- Python 3.x
+- JSON → CSV converter tool (located under `/tools/trello-json-to-ledger-csv/`)
+
+Manual operation of V13 requires only Excel.
+Tooling enables structured transaction import and validation workflows.
