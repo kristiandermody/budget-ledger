@@ -1,12 +1,13 @@
 # Budget & Ledger — Version 13.0 Release Notes
 
+
 **Release Date:** February 2026
 
 ## Purpose
 Version 13 is the first fully governed architecture of the Budget & Ledger system.
 
 ## Highlights
-- Defined money flow model: Income → Deposits → Unassigned → Transfers → Budget / Savings & Flex. Month must close with Unassigned = 0.
+- Defined structured money flow model: Deposits (Income, Refunds, etc.) → Unassigned → Transfers → Budget / Savings & Flex.
 - Centralized Transfers control for all reallocations.
 - Introduced Savings & Flex to track long‑term balances and reconciliation.
 - Added Refund handling as negative expenses.

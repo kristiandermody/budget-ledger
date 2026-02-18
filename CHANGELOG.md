@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented here.
 
+## 13.1.2 — Documentation Alignment
+- Removed Definition of Done from architecture reference
+- Tightened reconciliation invariant language
+- Clarified Unassigned month-close requirement
+- De-versioned GPT Agent documentation
+- Removed duplicate structural logic from GPT README
+- Aligned CLI validation and test documentation with governance model
+- Cleaned operating guide reconciliation language
+- Strengthened governance-first authority model
+
 ## v13.1.1 — Governance & Tooling Stabilization - 2026-02-15
 
 ### Governance

@@ -1,113 +1,84 @@
-# Configuration Layer
+# CLI Tool Configuration
 
-This directory contains the configuration files used by the Trello JSON → Ledger CSV converter tool.
+This directory contains static configuration files required by the Trello JSON → Ledger CSV CLI converter.
 
-These files define the structural controls that allow Trello transaction data to be translated into a governed V13 Ledger format.
+These files provide mapping and reference data used during conversion.
 
-This directory is part of the tool layer and does not modify or redefine V13 ledger architecture.
+They are not governance documents.
 
 ---
 
 ## Purpose
 
-The configuration layer exists to provide:
+The configuration files in this directory:
 
-- Controlled category definitions
-- Trello label translation rules
-- Structural validation inputs for the converter
-- Protection against classification drift
+- Support deterministic conversion
+- Provide label-to-category mapping
+- Define known category structures for the CLI tool
+- Assist with validation alignment
 
-Trello is flexible by design.  
-The V13 Ledger is structured and governed.  
-
-This configuration layer bridges that gap.
+They must remain consistent with active governance documentation.
 
 ---
 
 ## Files
 
-### `category_master.csv`
+### category_master.csv
 
-Authoritative registry of valid ledger classifications.
+Defines the valid parent and child category relationships recognized by the CLI tool.
 
-This file defines:
+This file must align with:
 
-- What categories are allowed
-- How categories relate to one another
-- Which classifications are considered valid for conversion
+- Parent_Category_Registry.md
+- Parent_Child_Taxonomy.md
 
-It functions as the structural validation source for the converter.
-
-No category should exist in the ledger output unless it is represented here.
+The CLI tool does not auto-create new categories.
 
 ---
 
-### `label_mapping.csv`
+### label_mapping.csv
 
-Translation layer between Trello labels and ledger classifications.
+Maps Trello labels to ledger categories and structural classifications.
 
-This file defines:
+This file defines how Trello metadata is interpreted during conversion.
 
-- How Trello labels are interpreted
-- Which ledger classification a label maps to
-- How user input becomes structured ledger data
+Label mappings must be consistent with:
 
-All Trello labels used for transaction classification must be mapped here.
-
-If a label is not mapped, the converter should treat it as a validation issue.
+- Structural_Label_Registry.md
+- Trello_JSON_Interpretation_Spec.md
 
 ---
 
-## Governance Rules
+## Governance Alignment
 
-1. These files are tool-level configuration artifacts.
-2. Changes to these files affect conversion behavior.
-3. Changes do not alter V13 ledger architecture.
-4. Any structural changes should be accompanied by:
-   - Tool version review
-   - Tool CHANGELOG update
-5. Categories should not be created ad hoc in Trello without updating this configuration layer.
-6. This directory is considered controlled infrastructure, not casual data.
+Governance documents define structural rules.
 
----
+Configuration files implement static mappings that must conform to those rules.
 
-## Design Philosophy
+If governance changes:
 
-The converter tool is intentionally separated from ledger architecture.
+1. Update governance documentation.
+2. Update configuration files in this directory.
+3. Re-run conversion and validation.
+4. Commit changes together.
 
-The ledger defines structure.
-This configuration layer enforces translation into that structure.
-
-The goal is:
-
-- Predictable classification
-- Repeatable conversion
-- Prevention of category drift
-- Auditability of transformation logic
+Do not update configuration files independently of governance changes.
 
 ---
 
-## Scope
+## Version Awareness
 
-This directory governs only the Trello JSON → Ledger CSV tool.
+Configuration files must match the active ledger schema and governance snapshot.
 
-It does not:
-
-- Define budget logic
-- Define workbook calculations
-- Redefine V13 architecture
-- Modify ledger rules
-
-Those concerns are documented in the root project documentation.
+Do not mix configuration files from different branches or versions.
 
 ---
 
-## Future Evolution
+## Prohibited Actions
 
-Schema refinements may occur as the tool matures.
+- Do not auto-create categories.
+- Do not add structural labels not defined in governance.
+- Do not modify schema columns.
+- Do not bypass validation errors via configuration.
 
-Any evolution should maintain:
-
-- Clear separation from ledger architecture
-- Backward compatibility where possible
-- Explicit documentation of structural changes
+All structural behavior is defined in governance documentation.

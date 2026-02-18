@@ -1,5 +1,8 @@
 # Release Notes for Version 13.1
 
+
+v13.1 introduces structural ledger refinements while preserving the v13 architectural baseline.
+
 ## Added
 - Transaction Type
 - Transaction Classification
